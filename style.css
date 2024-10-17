@@ -1,0 +1,118 @@
+body {
+    background-color: dodgerblue;
+    margin: 0;
+    height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "form cards"
+    ;
+}
+
+form {
+    background-color: rgb(62, 158, 255);
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    flex-basis: 250px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+input, select, button {
+    background-color: white;
+    border: none;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: dodgerblue;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+#cards {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: flex-start;
+} 
+
+.card {
+    height: 180px;
+    background-color: rgb(62, 158, 255);
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    flex-basis: 300px;
+    display: grid;
+    grid-template-rows: 3fr repeat(4, 2fr);
+    grid-template-columns: 2fr 5fr;
+    ;
+    padding: 15px;
+}
+
+.card > p {
+    margin: 0;
+    font-size: 0.9rem;
+    align-self: center;
+}
+
+.card > p:nth-child(odd):not(:first-of-type) {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.card > p:first-of-type {
+    padding: 6px;
+    background-color: white;
+    color: dodgerblue;
+    text-align: center;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    align-self: start;
+}
+
+.card > button:first-of-type {
+    padding: 4px;
+    width: 70px;
+    height: 30px;
+    justify-self: right;
+    background-color: rgb(62, 158, 255);
+    color: white;
+    border-radius: 5px;
+    align-self: start;
+}
+
+.card > button:first-of-type:hover {
+    background-color: orange;
+}
+
+.card > button:last-of-type {
+    border: 0;
+    padding: 0;
+    width: 50px;
+    height: 25px;
+    align-self: center;
+}
